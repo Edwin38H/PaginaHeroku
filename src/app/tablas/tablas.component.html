@@ -1,1 +1,29 @@
-<p>tablas works!</p>
+
+<div class="container">
+
+    <h3>Productos</h3><br>
+
+    <table class="table table-striped table-dark">
+        <thead>
+        <tr>
+            <th scope="col">codigo</th>
+            <th scope="col">nombre</th>
+            <th scope="col">nombre corto</th>
+            <th scope="col">Descripcion</th>
+            <th scope="col">PVP</th>
+            <th scope="col">familia</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let Respuesta of Productos">
+            <th scope="row">{{ Respuesta.cod}}</th>
+            <td>{{ Respuesta.nombre }}</td>
+            <td>{{ Respuesta.nombre_corto }}</td>
+            <td>{{ Respuesta.descripcion }}</td>
+            <td>{{ Respuesta.PVP }}</td>
+            <td>{{ Respuesta.familia }}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
