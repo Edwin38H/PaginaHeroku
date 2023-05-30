@@ -1,0 +1,8 @@
+.contenedor{
+    height: 49%;
+    background-color: #6A737C;
+    margin: 1% 1%;
+  }
+  html, body{
+    height: 100%;
+  }

@@ -1,0 +1,73 @@
+<body>
+    
+<div class="container">
+
+    <h3>Vender o agregar invetario</h3><br>
+    <div class="row">
+        <div class="col-sm-6">
+           <!-- Primer formulario -->
+         
+            <!-- Contenido del primer formulario -->
+            <form (ngSubmit)="ActualizarC(codigoProducto.value, totalVender1.value, totalVender2.value)">
+              <div class="form-group">
+                <label for="exampleInputEmail1">Código de producto</label>
+                <input type="text" id="exampleInput" class="form-control" #codigoProducto aria-describedby="emailHelp" placeholder="Ingresa código de producto">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Ingresa total de producto a comprar</label>
+                <input type="number" class="form-control" #totalVender1 placeholder="Ingresa total a comprar">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Ingresa tienda</label>
+                <input type="number" class="form-control" #totalVender2 placeholder="Ingresa tienda">
+              </div>
+              <button type="submit" class="btn btn-primary">Comprar</button>
+            </form>
+        </div>
+        <div class="col-sm-6">
+          <!-- Segundo formulario -->
+         
+            <!-- Contenido del segundo formulario -->
+            <form (ngSubmit)="ActualizarV(codigoProducto1.value, totalVender11.value, totalVender21.value)">
+              <div class="form-group">
+                <label for="exampleInputEmail1">Código de producto</label>
+                <input type="text" id="exampleInput" class="form-control" #codigoProducto1 aria-describedby="emailHelp" placeholder="Ingresa código de producto">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Ingresa total de producto a vender</label>
+                <input type="number" class="form-control" #totalVender11 placeholder="Ingresa total a vender">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Ingresa tienda</label>
+                <input type="number" class="form-control" #totalVender21 placeholder="Ingresa la tienda">
+              </div>
+              <button type="submit" class="btn btn-primary">Vender</button>
+            </form>
+          
+        </div>
+      </div>
+    
+      
+    <table class="table table-striped table-dark">
+        <thead>
+        <tr>
+            <th scope="col">codigo</th>
+            <th scope="col">Tienda</th>
+            <th scope="col">unidades</th>
+           
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let Respuesta of stock">
+            <th scope="row">{{ Respuesta.producto}}</th>
+            <td>{{ Respuesta.tienda }}</td>
+            <td>{{ Respuesta.unidades }}</td>
+           
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+</body>
